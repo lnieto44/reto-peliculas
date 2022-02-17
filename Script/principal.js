@@ -30,6 +30,5 @@ function guardatos(nomb, ape, tel, direc, obser){
 
 }
 
-//Ahora para traer los datos
 
 
