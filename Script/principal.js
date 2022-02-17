@@ -1,31 +1,33 @@
 
+//captura los datos
+let enviar = document.getElementById("boton_pelicula")
+enviar.addEventListener("click",traedatos)
 
-document.getElementById("boton_pelicula").addEventListener("click", function() {
-    var nombreUsuario = document.getElementById("nombre").value;
-    var apellidoUsuario = document.getElementById("apellido").value;
-    var direccionUsuario = document.getElementById("direccion").value;
-    var observacionUsuario = document.getElementById("observaciones").value;
+//trae los datos 
+function traedatos() {
+    let nombreUsuario = document.getElementById("nombre").value;
+    let apellidoUsuario = document.getElementById("apellido").value;
+    let telefonoUsuario = document.getElementById("telefono").value;
+    let direccionUsuario = document.getElementById("direccion").value;
+    let observacionUsuario = document.getElementById("observaciones").value;
+    console.log(nombreUsuario, apellidoUsuario, telefonoUsuario, direccionUsuario, observacionUsuario)
+    guardatos(nombreUsuario, apellidoUsuario, telefonoUsuario, direccionUsuario, observacionUsuario) 
 
-    var telefonoUsuario = document.getElementById("telefono").value;
-    
     if (isNaN(telefonoUsuario)) {
-        alert("El campo 'dirección' debe ser Numérico!!");
+        alert("El campo 'telefono' debe ser Numérico!!");
 
     } else {
-    
-    // localStorage
-    
-    
-    localStorage.nombre = nombreUsuario;
-    localStorage.apellido = apellidoUsuario;
-    localStorage.telefono = telefonoUsuario;
-    localStorage.direccion = direccionUsuario;
-    localStorage.observacion = observacionUsuario;
-  
-
-
+}
 }
 /////////////////////////////////////
+//envio informacion al localstorage 
+function guardatos(nomb, ape, tel, direc, obser){
+    localStorage.setItem("Nombre", nomb) 
+    localStorage.setItem("Apellido", ape)
+    localStorage.setItem("Telefono", tel)
+    localStorage.setItem("Dirrecion", direc)
+    localStorage.setItem("Observacion", obser)
 
-  });
+}
 
+//Ahora para traer los datos
