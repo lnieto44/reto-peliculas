@@ -90,6 +90,17 @@
     border: 1px solid greenyellow;
   }
 
+  .container{
+    width: 40%;
+    background-color: rgb(97, 185, 141);
+    margin-top: 5%;
+    line-height: 2rem;
+    padding: 4%;
+    color: white;
+    font-size: 20px;
+    border: 1px solid greenyellow;
+}
+
   #slider {
     border-radius: 0.8em;
     width: 97vw;
@@ -147,6 +158,10 @@
     margin-right: 0em;
 
   }
+  .persona{
+    border: 1px solid;
+    width: 200px;
+}
   
   h3{
     text-align: center;
