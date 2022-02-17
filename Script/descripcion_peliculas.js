@@ -1,8 +1,10 @@
+
+
 ///// conectando los datos de películas a otra vista
 
-let a = document.createElement("");
-let b =document.createElement("");
-let c =document.createElement("");  
+let a = document.createElement("DIV");
+let b =document.createElement("DIV");
+let c =document.createElement("DIV");  
 
 // nombre película desde localStorage;
 a.innerHTML = localStorage.getItem("nombrePelicula");
