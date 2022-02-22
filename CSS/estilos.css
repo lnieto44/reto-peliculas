@@ -80,10 +80,14 @@
   }
   
   .datosPeli {
-    text-align: center;
-    margin: 5em;
-    padding: 0% 25%;
-    font-size: large;
+      text-align: center;
+      margin: 3em;
+      background-color: rgb(97, 185, 141);
+      margin-top: 6%;
+      line-height: 3rem;
+      color: white;
+      font-size: 30px;
+      border: 1px solid rgb(7 7 7 / 90%);
   }
 
   .item1{
@@ -207,8 +211,14 @@
 
   .datosPeli {
     text-align: center;
-    margin: 2em;
-  }
+    margin: 3em;
+    background-color: rgb(97, 185, 141);
+    margin-top: 6%;
+    line-height: 3rem;
+    color: white;
+    font-size: 30px;
+    border: 1px solid rgb(7 7 7 / 90%);
+}
 
   .item1{
     border: 1px solid greenyellow;

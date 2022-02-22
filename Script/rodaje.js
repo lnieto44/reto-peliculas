@@ -1,15 +1,15 @@
-peliculas = [
+var peliculas = [
   {
     nombre: "Encanto",
     año: "2021",
     descripcion:
-      "en una casa mágica, vive la extraordinaria familia Madrigal donde todos tienen habilidades fantásticas.",
+      "En una casa mágica, vive la extraordinaria familia Madrigal donde todos tienen habilidades fantásticas.",
   },
   {
     nombre: "Encantada",
     año: "2007",
     descripcion:
-      "vive feliz en un mundo animado llamado Andalasia, donde los animales son sus compañeros. Ella sueña con su verdadero amor y lo representa con una estatua que ella misma construyó.",
+      "Vive feliz en un mundo animado llamado Andalasia, donde los animales son sus compañeros. Ella sueña con su verdadero amor y lo representa con una estatua que ella misma construyó.",
   },
   {
     nombre: "Spider mas lejos de casa",
@@ -33,7 +33,7 @@ peliculas = [
     nombre: "Avengers: infinity war",
     año: "2018",
     descripcion:
-      "crea un viaje cinematográfico sin precedentes durante diez años y que abarca todo el Universo Marvel. Los Vengadores y sus superhéroes deben estar dispuestos a sacrificar todo en un intento de derrotar al poderoso Thanos, antes de que sus planes de devastación y ruina ponga fin al universo.",
+      "Crea un viaje cinematográfico sin precedentes durante diez años y que abarca todo el Universo Marvel. Los Vengadores y sus superhéroes deben estar dispuestos a sacrificar todo en un intento de derrotar al poderoso Thanos, antes de que sus planes de devastación y ruina ponga fin al universo.",
   },
   {
     nombre: "Capitán América",
@@ -42,6 +42,15 @@ peliculas = [
       "El Capitán América, cuyo nombre real es Steven (Steve) Grant Rogers, es un superhéroe ficticio que aparece en los cómics estadounidenses publicados por Marvel Comics.",
   },
 ];
+
+
+function getListaPeliculas(){
+  var peliculasLocal = JSON.parse(localStorage.getItem('ListaPeliculasLS'));
+  if(peliculasLocal == null){
+    peliculasLocal = peliculas;
+  }
+  return peliculas;
+}
 
 /////////////////////////////// Slider de películas!!
 
