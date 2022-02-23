@@ -1,34 +1,33 @@
+const enviarDatos = () => {
 
-//captura los datos
-let enviar = document.getElementById("boton_pelicula")
-enviar.addEventListener("click",traedatos)
+    nombre = document.getElementById('nombre').value;
+    apellido = document.getElementById('apellido').value;
+    telefono = Number(document.getElementById('telefono').value);
+    direccion = document.getElementById('direccion').value;
+    descripcion = document.getElementById('observaciones').value;
 
-//trae los datos 
-function traedatos() {
-    let nombreUsuario = document.getElementById("nombre").value;
-    let apellidoUsuario = document.getElementById("apellido").value;
-    let telefonoUsuario = document.getElementById("telefono").value;
-    let direccionUsuario = document.getElementById("direccion").value;
-    let observacionUsuario = document.getElementById("observaciones").value;
-    console.log(nombreUsuario, apellidoUsuario, telefonoUsuario, direccionUsuario, observacionUsuario)
-    guardatos(nombreUsuario, apellidoUsuario, telefonoUsuario, direccionUsuario, observacionUsuario) 
-
-    if (isNaN(telefonoUsuario)) {
-        alert("El campo 'telefono' debe ser Numérico!!");
-
+    if (nombre == "" || apellido == "" || telefono == 0 || direccion == "" || descripcion == "") {
+    
+    } else if (isNaN(telefono)) {
+       
     } else {
+        localStorage.setItem("Nombre", JSON.stringify(nombre));
+        localStorage.setItem("Apellido", JSON.stringify(apellido));
+        localStorage.setItem("Telefono", JSON.stringify(telefono));
+        localStorage.setItem("Direccion", JSON.stringify(direccion));
+        localStorage.setItem("Descripcion", JSON.stringify(descripcion));
+       
+    }
 }
-}
-/////////////////////////////////////
-//envio informacion al localstorage 
-function guardatos(nomb, ape, tel, direc, obser){
-    localStorage.setItem("Nombre", nomb) 
-    localStorage.setItem("Apellido", ape)
-    localStorage.setItem("Telefono", tel)
-    localStorage.setItem("Dirrecion", direc)
-    localStorage.setItem("Observacion", obser)
 
-}
+let enviar = document.querySelector('#boton_pelicula');
+enviar.addEventListener('click', enviarDatos, true);
+
+let nombre,
+    apellido,
+    telefono,
+    direccion,
+    descripcion;
 
 
 
